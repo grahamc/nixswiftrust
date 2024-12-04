@@ -1,0 +1,5 @@
+target
+swift-lib/.swiftpm
+.DS_Store
+result
+.direnv

@@ -1,0 +1,84 @@
+{
+  "nodes": {
+    "fenix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-analyzer-src": "rust-analyzer-src"
+      },
+      "locked": {
+        "lastModified": 1722493751,
+        "narHash": "sha256-l7/yMehbrL5d4AI8E2hKtNlT50BlUAau4EKTgPg9KcY=",
+        "rev": "60ab4a085ef6ee40f2ef7921ca4061084dd8cf26",
+        "revCount": 1955,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/nix-community/fenix/0.1.1955%2Brev-60ab4a085ef6ee40f2ef7921ca4061084dd8cf26/01910d03-2462-7e48-b72e-439d1152bd11/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/nix-community/fenix/0.1.1584.tar.gz"
+      }
+    },
+    "naersk": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1733291127,
+        "narHash": "sha256-cVobQRXrDshL6Lh58wiqQh1vNwgHU5q/dSMGSdTDOXA=",
+        "owner": "grahamc",
+        "repo": "naersk",
+        "rev": "adbf3b75057151f09fc17bf3a105e2e1b9b20f9d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "grahamc",
+        "repo": "naersk",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1733212471,
+        "narHash": "sha256-M1+uCoV5igihRfcUKrr1riygbe73/dzNnzPsmaLCmpo=",
+        "rev": "55d15ad12a74eb7d4646254e13638ad0c4128776",
+        "revCount": 716003,
+        "type": "tarball",
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.1.716003%2Brev-55d15ad12a74eb7d4646254e13638ad0c4128776/01938dca-d03e-7d46-bd29-73676b32dd30/source.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://flakehub.com/f/NixOS/nixpkgs/0.1.590113.tar.gz"
+      }
+    },
+    "root": {
+      "inputs": {
+        "fenix": "fenix",
+        "naersk": "naersk",
+        "nixpkgs": "nixpkgs"
+      }
+    },
+    "rust-analyzer-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1722449213,
+        "narHash": "sha256-1na4m2PNH99syz2g/WQ+Hr3RfY7k4H8NBnmkr5dFDXw=",
+        "owner": "rust-lang",
+        "repo": "rust-analyzer",
+        "rev": "c8e41d95061543715b30880932ec3dc24c42d7ae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rust-lang",
+        "ref": "nightly",
+        "repo": "rust-analyzer",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
