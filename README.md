@@ -16,6 +16,17 @@ See it fail on x86_64-darwin:
 nix build .#packages.x86_64-darwin.default -L
 ```
 
+The command I was using while making the reproducer, to make sure it failed the same way:
+
+```
+if cargo build && nix build .#packages.aarch64-darwin.default && ! nix build .#packages.x86_64-darwin.default -L ; then echo "still broke the same way"; else echo "broke differently"; fi
+```
+
+## Notes
+
+- It uses `grahamc/naersk` instead of `nix-community/naersk`, but only because I thought maybe `nix-community/naersk`'s inclusion of frameworks might be causing the problem: https://github.com/grahamc/naersk/commit/adbf3b75057151f09fc17bf3a105e2e1b9b20f9d ... this is the only difference.
+- All the flake inputs were updated right before testing.
+
 ## Log
 
 ```
