@@ -1,5 +1,11 @@
 # nixrustswift
 
+My project is a Rust project, using naersk as the build infrastructure and fenix to get a recent Rust.
+My project also FFI's to Swift, using [the `swift-rs` crate](https://github.com/Brendonovich/swift-rs).
+
+I used to be able to build my project against x86_64-darwin and aarch64-darwin.
+However, I'm now having trouble and I think it might have to do with Apple SDKs, and perhaps the new SDK patterns.
+
 This is a minimal reproducer of failing to get swift-rs to be happy when building for x86_64-darwin using new SDKs.
 
 ## Reproducer
