@@ -10,7 +10,7 @@
     };
 
     naersk = {
-      url = "github:grahamc/naersk/swiftpackages-stdenv";
+      url = "github:DeterminateSystems/naersk/apple-sdks";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -50,7 +50,7 @@
           };
         in
         rec {
-          nixrustswift = naerskLib.buildPackage {
+          nixrustswift = (naerskLib.override ({ pkgs, ... }: { stdenv = pkgs.swiftPackages.stdenv; })).buildPackage {
             pname = "nixrustswift";
             version = (builtins.fromTOML (builtins.readFile ./Cargo.toml)).package.version;
             src = builtins.path {
