@@ -27,15 +27,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1733291127,
-        "narHash": "sha256-cVobQRXrDshL6Lh58wiqQh1vNwgHU5q/dSMGSdTDOXA=",
+        "lastModified": 1733325773,
+        "narHash": "sha256-SYYe2SWlci2Jipx2Qlnot0kkgkSWnQsV0SL++rSYBzk=",
         "owner": "grahamc",
         "repo": "naersk",
-        "rev": "adbf3b75057151f09fc17bf3a105e2e1b9b20f9d",
+        "rev": "f687b928434a5ae56727e591bde3571d772a8246",
         "type": "github"
       },
       "original": {
         "owner": "grahamc",
+        "ref": "swiftpackages-stdenv",
         "repo": "naersk",
         "type": "github"
       }
