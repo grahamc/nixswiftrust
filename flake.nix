@@ -48,7 +48,9 @@
             cargo = toolchain;
             rustc = toolchain;
           };
-          sharedAttrs = {
+        in
+        rec {
+          nixrustswift = naerskLib.buildPackage {
             pname = "nixrustswift";
             version = (builtins.fromTOML (builtins.readFile ./Cargo.toml)).package.version;
             src = builtins.path {
@@ -57,7 +59,7 @@
               filter = (path: type: baseNameOf path != "nix" && baseNameOf path != ".github");
             };
 
-            buildInputs = with final; [
+            nativeBuildInputs = with final; [
               swift
               swiftPackages.swiftpm
               xcbuild
@@ -73,9 +75,6 @@
             doDocFail = false;
             cargoTestOptions = f: f ++ [ "--all" ];
           };
-        in
-        rec {
-          nixrustswift = naerskLib.buildPackage sharedAttrs;
         };
 
 
@@ -89,12 +88,13 @@
 
             RUST_SRC_PATH = "${toolchain}/lib/rustlib/src/rust/library";
 
-            nativeBuildInputs = with pkgs; [ ];
-            buildInputs = with pkgs; [
-              toolchain
+            nativeBuildInputs = with pkgs; [
               swift
               swiftPackages.swiftpm
               xcbuild
+            ];
+            buildInputs = with pkgs; [
+              toolchain
             ];
 
             SWIFT_RS_CLANG = "${pkgs.clang}/bin/clang";
