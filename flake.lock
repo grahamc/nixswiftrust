@@ -27,15 +27,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1733291127,
-        "narHash": "sha256-cVobQRXrDshL6Lh58wiqQh1vNwgHU5q/dSMGSdTDOXA=",
-        "owner": "grahamc",
+        "lastModified": 1733328766,
+        "narHash": "sha256-a4WZp1xQkrnA4BbnKrzJNr+dYoQr5Xneh2syJoddFyE=",
+        "owner": "DeterminateSystems",
         "repo": "naersk",
-        "rev": "adbf3b75057151f09fc17bf3a105e2e1b9b20f9d",
+        "rev": "4d4fe31a8b34b002088d9620d60c3974c406dd1d",
         "type": "github"
       },
       "original": {
-        "owner": "grahamc",
+        "owner": "DeterminateSystems",
+        "ref": "apple-sdks",
         "repo": "naersk",
         "type": "github"
       }
