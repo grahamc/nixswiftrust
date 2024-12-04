@@ -10,7 +10,7 @@
     };
 
     naersk = {
-      url = "github:grahamc/naersk";
+      url = "github:grahamc/naersk/swiftpackages-stdenv";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
